@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Processing Web App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <h1>Image Processing Web App</h1>
+    </div>
+  </nav>
+
+  <div class="container2">
+    <form id="uploadForm">
+      <input type="file" id="fileInput" accept="image/*">
+      <button type="submit">Upload Image</button>
+    </form>
+
+    <div id="imageDisplay">
+      <h2>Original Image</h2>
+      <img id="originalImage" src="" alt="Original Image">
+
+      <h2>Processed Image</h2>
+      <img id="processedImage" src="" alt="Processed Image">
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
